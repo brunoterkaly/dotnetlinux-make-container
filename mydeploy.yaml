@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: dotnetlinux
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dotnetlinux
+    spec:
+      containers:
+        - image: "brunoterkaly/dotnetlinux"
+          imagePullPolicy: Always
+          name: dotnetlinux
+          ports:
+            - containerPort: 80
