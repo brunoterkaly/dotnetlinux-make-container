@@ -47,14 +47,3 @@ kubectl apply -f <YOUR_YAML_FILE>.yaml
 ```
 
 After applying these changes your Pod should transit from the `Pending` phase to the `Running` phase.
-
-## Contact 
-
-For further information or queries, please contact:
-
-- [Github User1](https://github.com/user1)
-- [Github User2](https://github.com/user2)
-- [Github User3](https://github.com/user3)
-
-Just replace `user1`, `user2`, `user3` with actual usernames. 
-
