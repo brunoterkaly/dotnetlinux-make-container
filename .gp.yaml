@@ -1,0 +1,17 @@
+name: test runbookhub
+desc: Sample runbook hub
+runbooks:
+- name: Pod-Pending
+  desc: Runbook for Pod level CrashLoopBackOff and ImagePullBackOff
+  selectors:
+  - type: labelSelector
+    selector: app=image-pull-failure-pod
+  - type: jsonPathSelector
+    selector: '{.status.phase}=Pending'
+  - type: jsonPathSelector
+    selector: '{.spec.replica}=1'
+  doc: backoff/pod-runbook.md
+  contacts:
+  - name: Vinothini Raju
+    email: vinothini@gopaddle.io
+    role: Developer
